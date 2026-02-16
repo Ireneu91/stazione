@@ -26,9 +26,9 @@ $trains = [
     'T1' => new Train('T1', capacity: 180, passengers: 140),
     'T2' => new Train('T2', capacity: 120, passengers: 60),
     'T3' => new Train('T3', capacity: 220, passengers: 200),
-    'T4' => new Train('T3', capacity: 220, passengers: 200),
-    'T5' => new Train('T3', capacity: 120, passengers: 80),
-    'T6' => new Train('T3', capacity: 120, passengers: 50),
+    'T4' => new Train('T4', capacity: 220, passengers: 200),
+    'T5' => new Train('T5', capacity: 120, passengers: 80),
+    'T6' => new Train('T6', capacity: 120, passengers: 50),
 ];
 
 println("=== Train Station Simulator (CLI) ===");

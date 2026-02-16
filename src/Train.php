@@ -12,6 +12,7 @@ final class Train
     private int $passengers;
     private int $capacity;
 
+    // ? questa classe verrà chiamata da un'altra classe che definirà RailwayStation
     private ?RailwayStation $station = null;
     private ?int $assignedTrack = null;
 
@@ -118,7 +119,7 @@ final class Train
             throw new \InvalidArgumentException('count must be >= 0');
         }
         if ($this->passengers + $count > $this->capacity) {
-            throw new \RuntimeException("Cannot add $count passengers: would exceed capacity");
+            throw new \RangeException("Cannot add $count passengers: would exceed capacity");
         }
 
         $this->passengers += $count;
