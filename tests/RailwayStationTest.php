@@ -4,17 +4,24 @@ declare(strict_types=1);
 
 namespace Tests;
 
+use App\RailwayStation;
+
 use PHPUnit\Framework\TestCase;
+use InvalidArgumentException;
 
 final class RailwayStationTest extends TestCase
 {
     public function test_constructor_validates_tracks_and_waiting_passengers(): void
     {
-        $this->markTestIncomplete('Testa che tracks >= 1 e waitingPassengers >= 0; devono lanciare InvalidArgumentException in caso contrario.');
+        $this->expectException(InvalidArgumentException::class);
+        new RailwayStation(0, -1);
+
+        // $this->markTestIncomplete('Testa che tracks >= 1 e waitingPassengers >= 0; devono lanciare InvalidArgumentException in caso contrario.');
     }
 
     public function test_assign_first_free_track_returns_first_free_track_and_null_when_full(): void
     {
+        
         $this->markTestIncomplete('Testa che i binari vengano assegnati in ordine (1..N) e che quando sono tutti occupati ritorni null.');
     }
 
