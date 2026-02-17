@@ -53,6 +53,9 @@ final class RailwayStation
     public function assignFirstFreeTrack(string $trainId): ?int
     {
         foreach ($this->tracks as $trackNumber => $occupiedBy) {
+            if($occupiedBy == $trainId){
+                return $trackNumber;
+            }
             if ($occupiedBy === null) {
                 $this->tracks[$trackNumber] = $trainId;
                 return $trackNumber;
